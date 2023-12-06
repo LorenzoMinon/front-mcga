@@ -1,16 +1,15 @@
-// src/App.tsx
+// App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import ProductCrud from './components/ProductCrud';
 import PrivateRoute from './components/PrivateRoute';
-import 'firebase/auth';
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<div>Login Component</div>} />
         <PrivateRoute path="/product-crud" element={<ProductCrud />} />
         <Route path="/" element={<ProductList />} />
       </Routes>
